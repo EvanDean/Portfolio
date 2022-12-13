@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evan Dean's Portfolio</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/tab.png">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <menu id="mainMenu"> <!--Side Navigation Bar-->
+        <div class="main-menu-top">
+            <img src="./images/portraits/portrait9.jpg" alt="Picture of Evan" id="portrait9"><!--Different portraits that change-->
+            <img src="./images/portraits/portrait1.png" alt="Picture of Evan" id="portrait1">
+            <img src="./images/portraits/portrait2.jpg" alt="Picture of Evan" id="portrait2">
+            <img src="./images/portraits/portrait3.jpg" alt="Picture of Evan" id="portrait3">
+            <img src="./images/portraits/portrait4.png" alt="Picture of Evan" id="portrait4">
+            <img src="./images/portraits/portrait6.jpg" alt="Picture of Evan" id="portrait6">
+            <img src="./images/portraits/portrait7.png" alt="Picture of Evan" id="portrait7">
+            <img src="./images/portraits/portrait8.png" alt="Picture of Evan" id="portrait8">
+            <span id="name">Evan</span>
+            <span id="job">Web Developer</span> 
+        </div>
+        <nav class="main-menu-nav">
+            <a rel="skills" href="#skills-heading" id="navItems">Skills</a>
+            <a rel="about" href="#about-heading" id="navItems">About</a>
+            <a rel="cv" href="./files/CV.docx" id="navItems">CV</a>
+            <a rel="contact" href="#footer" id="navItems">Contact</a>
+        </nav>
+        <div class="social"><!--Links to LinkedIn and Github-->
+                <a href="https://www.linkedin.com/in/evan-dean-8b613124b/">
+                    <img src="./images/social/lilt2.png" id="linkedinlogo">
+                </a>
+                <a href="https://github.com/EvanDean">
+                    <img src="./images/social/gh.png" id="githublogo">
+                </a>
+        </div>
+    </menu>
+    <div id="hideMenu">
+        <div id="center-con">
+            <div class="round">
+                <div id="cta">
+                    <span class="arrow primera next "></span>
+                    <span class="arrow segunda next "></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Dropdown menu for light/ dark mode-->
+    <!--<div class="dropdown">
+        <button class="dropbtn">Mode</button>
+        <div class="dropdown-content">
+          <a href="#" id="lightMode">Light</a>
+          <a href="#" id="darkMode">Dark</a>
+        </div>
+      </div>//-->
+    <div class="main"><!--Main Part of the page-->
+        <section id="phoneNavBar">
+            <nav class="navbarPhone">
+                <a rel="skills" href="#skills-heading">Skills</a>
+                <a rel="about" href="#about-heading">About</a>
+                <a rel="cv" href="./files/CV.docx">CV</a>
+                <a rel="contact" href="#footer">Contact</a>
+            </nav>
+        </section>
+        <section id="section-home"><!--Top of the page that welcomes users-->
+            <div class="text-zone">
+                <h1 id="welcome">Hi,</h1>
+                <h1 id="welcome">I'm Evan,</h1>
+                <h1 id="welcome">a web developer</h1>
+                <br>
+                <p id="scroll-text">Scroll down to check out my projects</p>
+            </div>
+            <div class="scroll-down">
+                <span>scroll down -></span>
+            </div>
+        </section>
+        <section id="projects"><!--Portfolio Section-->
+            <div class="text-zone">
+                <h2 id="project-heading">My Portfolio</h2>
+                <p id="blurb">Some of my projects that I have been working on.</p>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="thumbnails">
+                <a href="https://github.com/EvanDean/Dinner-Idea-Generator"><img src="./images/thumbnails/dinners1.jpg" alt="Dinner Idea Generator Project" id="thumbnailImg"><p class="project-name" id="dinner-idea-generator">Dinner Idea Generator</p></a>
+                <a href="#"><img src="./images/thumbnails/pegasus.png" alt="Pegasus Farm Business Site" id="thumbnailImg">                <p class ="project-name" id="pegasus-farm">Pegasus Farm</p></a>
+                <a href="#"><img src="./images/thumbnails/burger.jpg" alt="Silly Burgers Website" id="thumbnailImg"><p class="project-name" id="silly-burgers">Silly Burgers</p></a>
+            </div>
+        </section>
+        <section id="my-skills">
+            <div class="text-zone">
+                <h2 id="skills-heading">My Skills</h2>
+                <p>Self taught front-end developer. With skills in HTML, CSS, and JavaScript.</p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="text-zone">
+                <h2 id="about-heading">About Me</h2>
+                <p>Hi! I'm Evan, a self taught front-end web developer from South Africa. After teaching English in Vietnam for five years, I found my passion in programming. Since then, I have been learning web development through Codecademy. I began my journey into web development through their full stack software engineer career path program. Beginning with HTML and CSS, I have been working my way through their course and I am eager to learn and continue to grow as a web developer.</p>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="text-zone">
+                <img src="./images/social/email.png" id="email">
+                <h3>evandeano@gmail.com</h3>
+                <img src="./images/social/phone.png" id="phone">
+                <h3>+260 76 978 3815</h3>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,724 @@
+/*Global Properties */
+body {
+    background-color: #1d1d1d;;
+    font-family: 'Source Code Pro', monospace;
+}
+/* Light mode (work in progress)
+.lightMode {
+    background-color: whitesmoke;
+    color: black;
+} */
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* Background Image of the site */
+.main {
+    background-image: url(./images/Blue\ Green\ Watercolor\ Linktree\ Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*This code allows the headings to bounce when hovered*/
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+/* Changes the font color */
+@keyframes color-change {
+    0% { color: rgb(0, 136, 255); }
+    50% { color: cyan; }
+    100% { color: rgb(0, 136, 255); }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/*Styles headings, paragraphs and anchors*/
+h2 {
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 4rem;
+    position: relative;
+    line-height: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    -webkit-animation-duration: 0.65s;
+    animation-duration: 0.65s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation: color-change 1s infinite;
+}
+
+h2:hover {
+    color: cyan;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}
+
+p {
+    color: aliceblue;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/* Responsive h2, p, and a media queries */
+@media screen and (max-width: 1000px) {
+    h2 {
+        font-size: 5rem;
+        line-height: 3rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+        animation: color-change 1s infinite;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles the left hand sidebar */
+
+#mainMenu {
+    top: 0;
+    left: 0;
+    background-color: black;
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+/* Portrait pictures */
+.main-menu-top img {
+    display: block;
+    width: 100%;
+}
+
+#name {
+    color: cyan;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+}
+
+#job {
+    color: rgb(172, 66, 2);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+}
+
+.main-menu-nav {
+    padding-top: 2rem;
+    font-size: 100%;
+}
+
+#navItems {
+    color: aliceblue;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    line-height: 4rem;
+}
+
+#navItems:hover {
+    color: cyan;
+}
+
+.main-menu-nav a {
+    text-decoration: none;
+    color: aliceblue;
+ }
+
+ /* Social Media Icons */
+.social {
+    display: inline-block;
+    padding-top: 2rem;
+    background-color: black;
+}
+
+ #linkedinlogo {
+    width: 26%;
+    height: 26%;
+    left: 0;
+    background-color: aliceblue;
+    margin-right: 1rem;
+    border-radius: 50%;
+ }
+
+#linkedinlogo:hover {
+    background-color: cyan;
+}
+
+#githublogo {
+    width: 26%;
+    height: 26%;
+    background-color: aliceblue;
+    justify-content: flex-end;
+    border-radius: 50%;
+}
+
+#githublogo:hover {
+    background-color: cyan;
+}
+
+/* Media queries for tablets and mobile devices */
+@media screen and (max-width: 1000px) {
+    #name {
+        height: 100%;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    #navItems {
+        height: 100%;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #mainMenu {
+        font-size: 1rem;
+    }
+
+}
+
+/* Makes the sidebar disappear for mobile devices */
+@media screen and (max-width: 500px) {
+    #mainMenu {
+        display: none;
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* Hidden sidebar */
+#hideMenu {
+    top: 0;
+    left: 0;
+    background-color: black;
+    border-right: 1px inset cyan;
+    position: fixed;
+    width: 3%;
+    height: 100%;
+
+    padding: 0.5rem;
+}
+
+/* Arrow display for hidden sidebar */
+#center-con {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.round {
+    position: absolute;
+    border: 2px solid #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+
+}
+
+#cta{
+    width:100%; cursor: pointer; position: absolute;
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-delay:0.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+#cta .arrow{left: 30%;}
+.arrow {position: absolute; bottom: 0;  margin-left:0px; width: 12px; height: 12px; background-size: contain; top:15px;}
+.segunda{margin-left: 8px;}
+
+.next {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+
+@keyframes bounceAlpha {
+  0% {opacity: 1; transform: translateX(0px) scale(1);}
+  25%{opacity: 0; transform:translateX(10px) scale(0.9);}
+  26%{opacity: 0; transform:translateX(-10px) scale(0.9);}
+  55% {opacity: 1; transform: translateX(0px) scale(1);}
+}
+
+.bounceAlpha {
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+.arrow.primera.bounceAlpha {
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-delay:0.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+/*.round:hover .arrow{
+
+}*/
+/*.round:hover .arrow.primera{
+
+}*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+div {
+    display: block;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* Dropdown Button (Work in Progress) */
+/*.dropbtn {
+    background-color:aliceblue;
+    color: black;
+    padding: 16px;
+    font-size: 1rem;
+    border: none;
+}
+
+.dropdown {
+    position:relative;
+    padding-left: 90%;
+    display: inline-block;
+}*/
+
+/*Dropdown Content (Hidden by Default)*/
+/*.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}*/
+
+/*Links inside dropdown*/
+/*.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}*/
+
+/*Changes color of dropdown links on hover*/
+/*.dropdown-content a:hover {
+    background-color: #ddd;
+}*/
+
+/* Show menu on hover */
+/*.dropdown:hover .dropdown-content {
+    display: block;
+}*/
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/*.dropdown:hover .dropbtn {background-color: #b523eb}*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* Responsive navbar for mobile devices */
+.navbarPhone {
+    display: none;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: right;
+}
+
+.navbarPhone a {
+    display: inline-block;
+    padding: 5px 35px 5px 5px;
+    font-weight: 600;
+    text-align: center;
+    color: aliceblue;
+}
+
+.navbarPhone a:hover {
+    color:cyan;
+}
+
+/* Media query for mobile navbar */
+@media screen and (max-width: 500px) {
+    .navbarPhone {
+        display:inline;
+        height: 2rem;
+    }
+    .navbarPhone a {
+        font-size: 0.88rem;
+    }
+}
+
+/*@media screen and (max-width 500px) {
+    .main {
+        padding-left: 50%;
+        padding-right: 80%;
+    }
+}*/
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* Welcome section at the top of the main page */
+#section-home {
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.text-zone {
+    position: relative;
+    z-index: 1;
+    margin-left: 3rem;
+    top: 0;
+}
+
+#welcome {
+    color: #fff;
+    margin: 0;
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 7rem;
+    position: relative;
+    font-family: 'Source Code Pro', monospace;
+    -webkit-animation-duration: 0.65s;
+    animation-duration: 0.65s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+    animation: color-change 1s infinite;
+}
+
+#welcome:hover {
+    color: cyan;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}
+
+.scroll-down {
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+    font-size: 0.8rem;
+    color: aliceblue;
+    transform: rotate(90deg);
+}
+
+.scroll-down:hover {
+    color: cyan;
+}
+
+/* Media queries for tablets and mobile devices */
+@media screen and (max-width: 1000px) {
+    #section-home {
+        height: 100vh;
+        padding-left: 10%;
+    }
+
+    #welcome {
+        font-size: 7rem;
+        line-height: 7rem;
+        -webkit-animation-duration: 1.4s;
+        animation-duration: 1.4s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #section-home {
+        height: 100vh;
+        padding-left: 1%;
+    }
+
+    #welcome {
+        animation: color-change 1s infinite;
+        font-size: 3rem;
+        line-height: 3rem;
+        -webkit-animation-duration: 1.4s;
+        animation-duration: 1.4s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+
+    }
+
+    #scroll-text {
+        padding-right: 10%;
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* Project/ portfolio section */
+#projects {
+    height: 30vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+#portfolio {
+    height: 55vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+/* Images of my projects */
+.thumbnails {
+    display: inline-block;
+    position: relative;
+}
+
+.thumbnails a:hover {
+    cursor: pointer;
+    filter: opacity(0.5);
+}
+
+.thumbnails #description:hover {
+    visibility: visible;
+}
+
+#thumbnailImg {
+    border-radius: 50%;
+    width: 25%;
+    height: auto;
+    margin-left: 3.5rem;
+}
+
+#dinner-idea-generator {
+    font-size: 1.5rem;
+    font-weight: bold;
+    bottom: 8.9rem;
+    left: 5rem;
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+}
+
+.project-name {
+    position: absolute;
+}
+
+.project-name:hover + .project-name {
+    display: block;
+}
+
+/* Media queries for tablets and mobile devices */
+@media screen and (max-width: 1000px) {
+    #projects {
+        padding-left: 10%;
+        padding-right: 10%;
+        height: 30vh;
+    }
+
+    #portfolio {
+        display: block;
+        height: 104rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .thumbnails {
+        display: block;
+    }
+    
+    .thumbnails Img {
+        display: block;
+        padding: 1.5rem;
+    }
+
+    #thumbnailImg {
+        width: 80%;
+        height: auto;
+        margin-left: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #projects {
+        padding-left: 1%;
+        padding-right: 15%;
+    }
+
+    #portfolio {
+        display: block;
+        height: 160vh;
+        padding-left: 1%;
+        padding-right: 15%;
+    }
+
+    .thumbnails {
+        display: block;
+    }
+    
+    .thumbnails Img {
+        display: block;
+        padding: 1.5rem;
+    }
+
+    .thumbnails a {
+        height: 33%;
+    }
+
+    #thumbnailImg {
+        width: 100%;
+        height: auto;
+        margin-left: 0rem;
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* Skills Section*/
+#my-skills {
+    height: 20vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+/* Media queries for tablets and mobile devices */
+@media screen and (max-width: 1000px) {
+    #my-skills {
+        padding-left: 6%;
+        padding-right: 10%;
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #my-skills {
+        padding-left: 1%;
+        padding-right: 10%;
+        height: 30vh;
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* About Section */
+#about {
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+/* Media queries for tablets and mobile devices */
+@media screen and (max-width: 1000px) {
+    #about {
+        height: auto;
+        padding-left: 6%;
+        padding-right: 10%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #about {
+        height: auto;
+        padding-left: 1%;
+        padding-right: 10%;
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* Footer Section */
+footer {
+    color: aliceblue;
+    background-color: black;
+    height: 60px;
+    z-index: -1;
+    text-align: end;
+}
+
+footer h3 {
+    display: inline-block;
+    padding-right: 40px;
+}
+
+#email {
+    display: inline-block;
+    height: 20px;
+    width:22px;
+    border-radius: 50%;
+}
+
+#phone {
+    display: inline-block;
+    height: 20px;
+    width:22px;
+    border-radius: 50%;
+}
+
+/* Media queries for tablets and mobile devices */
+@media screen and (max-width: 500px) {
+    footer {
+        height: 20vh;
+        display: block;
+        text-align: left;
+    }
+
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
